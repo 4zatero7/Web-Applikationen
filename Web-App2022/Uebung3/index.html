@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Effekte</title>
+    <style>
+        body {
+            background: #0e83cd;
+        }
+
+        /*.button {
+            display: block;
+            margin: 2rem auto;
+            padding: 1rem;
+            max-width: 10rem;
+            border: 3px solid white;
+            border-radius: 3px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+        }*/
+        a {
+            display: block;
+            margin: 2rem auto;
+            padding: 1rem;
+            max-width: 15rem;
+            border: 3px solid white;
+            border-radius: 3px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .switch:hover {
+            background-color: #afd8ff;
+        }
+
+        .vertical {
+            position: relative;
+        }
+
+        .vertical::after {
+            content: "";
+            background-color: rgba(175, 216, 255, 0.5);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 0;
+            transition: all 0.5s;
+        }
+
+        .vertical:hover::after {
+            height: 100%;
+            top: 0;
+        }
+
+        /*
+        button {
+            background-color: #0e83cd;
+        }
+        button:hover {
+            animation-name: bckgrnd-col;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes bckgrnd-col {
+            50% {
+                background-color: lime;
+            }
+            100% {
+                background-color: #afd8ff;
+            }
+        }
+        */
+    </style>
+</head>
+<body>
+Old-school Effekt:
+<a href="#" class="switch">Button change (Hover)</a>
+Mit Transitionen:
+<a href="#" class="vertical">Button vertical (&Uuml;bung)</a>
+<!--div>
+    <a href="#" class="button switch">Button change</a>
+    <a href="#" class="button vertical">Button vertical</a>
+
+    <button class="button">Button anim</button>
+</div-->
+</body>
+</html>

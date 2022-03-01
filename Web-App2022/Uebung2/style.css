@@ -1,0 +1,41 @@
+body{
+    background-color: lightgray;
+    max-width: 500px;
+}
+legend {
+    background: #f6f6f6;
+    border: 1px solid #585858;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+fieldset{
+    background-color: darkgray;
+}
+.geschlecht{
+    background-color: lightgray;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.posGschl{
+    text-align: center;
+}
+.eingabe{
+    text-align: center;
+}
+input{
+    margin-left: 20px;
+}
+.elemLinks{
+    margin-left: -15px;
+}
+.verschiebenEingabe{
+    padding-top: 10px;
+}
+.datenInput {
+    margin-top: 20px;
+    float: right;
+}
+.ausgabe{
+    margin-top: 10px;
+}

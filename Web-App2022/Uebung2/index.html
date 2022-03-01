@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <title>Body Mass Index</title>
+    <h1>BMI-Rechner</h1>
+</head>
+<body>
+    <fieldset>
+      <legend>
+        Angaben zur BMI-Berechnung
+      </legend>
+      <form action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php" method="get">
+        <section class="eingabe">
+          <div>
+            <label for="gewicht" class="elemLinks">Gewicht</label>
+            <input type = "number" id=gewicht name="gewicht">
+          </div>
+          <div class="verschiebenEingabe">
+            <label for="groesse">Größe</label>
+            <input type = "number" id=groesse name="groesse">
+          </div>
+        </section>
+        <br>
+        <fieldset class="geschlecht">
+          <legend>
+            Geschlecht
+          </legend>
+          <div class="posGschl">
+            <span class="sp_elem">
+              <input type = "radio" name="geschl" id="gesch_w" value="w">
+              <label for="gesch_w">Weiblich</label>
+            </span>
+            <span class="sp_elem">
+              <input type = "radio" name="geschl" id="gesch_m" value="m">
+              <label for="gesch_m">Männlich</label>
+            </span>
+            <span class="sp_elem">
+              <input type = "radio" name="geschl" id="gesch_s" value="s">
+              <label for="gesch_s">Sonstiges</label>
+            </span>
+          </div>
+        </fieldset>
+        <br>
+        <section class="eingabe">
+          <div>
+            <label for="username"></label>
+            Name
+            <input type = "text" id="username" placeholder="Max Muster">
+          </div>
+          <div>
+            <label for="email"></label>
+            Email
+            <input type = "email" id="email" placeholder="max.muster@gmail.com">
+          </div>
+        </section>
+        <br>
+        <div>
+          <input type = "reset" value="Zurücksetzen" class="datenInput">
+          <input type = "submit" value="Absenden" class="datenInput">
+        </div>
+      </form>
+    </fieldset>
+    <div class="ausgabe">
+      Ihr Body Mass Index beträgt ____.
+    </div>
+</body>
+</html>
