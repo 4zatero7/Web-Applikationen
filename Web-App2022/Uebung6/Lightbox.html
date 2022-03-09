@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Lightbox</title>
+			<style>
+				.thumbs {}
+				img.thumb{
+					cursor:pointer;
+					height:6rem;
+				}
+				#lightbox {
+					position:absolute;
+					left:50%;
+					top:50%;
+					transform:translate(-50%, -50%);
+					background:#fff;
+					border:1px solid gray;
+					box-shadow:6px 6px 14px -4px rgba(0, 0, 0, 0.3);
+					opacity:1;
+					transition:all .3s;
+				}
+				#lightbox.show {
+					display: block;
+				}
+				#lightbox.hide {
+					display: none;
+				}
+				#lightbox img {
+					display: block;
+				}
+
+				#close {
+					position:absolute;
+					width:2rem;
+					height:2rem;
+					top:1rem;
+					right:1rem;
+							background-color: rgba(150, 150, 150, 0.1);
+				}
+				#close::before,
+				#close::after {
+					content:' ';
+					position:absolute;
+					top:50%;
+					width:100%;
+					height:3px;
+					background:#424242;
+					transform:rotate(45deg);
+					cursor:pointer;
+				}
+				#close::after {
+					transform:rotate(-45deg);
+				}
+			</style>
+	</head>
+	<body>
+		<div class="thumbs">
+			<img class="thumb" src="starfish.png" data-src="https://static-b.imgix.net/starfish.png?w=500&amp;h=500">
+			<img class="thumb" src="goldengate.jpg" data-src="https://assets.imgix.net/unsplash/goldengate.jpg?w=500&amp;h=500">
+		</div>
+
+		<div id="lightbox" class="hide">
+			<a id="close" href="#"> </a>
+			<img id="targetImage">
+		</div>
+
+		<script>
+				let lightbox = document.getElementById("lightbox");
+				let images   = document.getElementsByClassName("thumb");
+
+				for (let i=images.length-1; i >= 0; i--) {
+					images[i].addEventListener("click", openLightbox);
+				}
+
+				document.getElementById("close").addEventListener("click", closeLightbox);
+
+				function openLightbox(e) {
+					lightbox.className = "show";
+					loadContent(e.target);
+				}
+
+				function closeLightbox(e) {
+					e.preventDefault();
+					lightbox.className = "hide";
+				}
+
+				function loadContent(img) {
+					console.log(img.dataset);
+					let imgSrc = img.dataset.src;
+					document.getElementById('targetImage').setAttribute('src', imgSrc);
+				}
+		</script>
+	</body>
+</html>

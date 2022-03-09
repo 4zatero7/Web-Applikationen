@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Lazy Loading of Images</title>
+	
+	<style>
+            .lazyLoad {}
+            img {
+                border: 1px solid #ccc;
+                width: 5rem;
+                height: 5rem;
+            }
+            img[data-src] {
+                background: url("https://media.tenor.com/images/5f1c57a4f18059b1bb946df247f8561d/tenor.gif");
+                background-size: cover;
+            }
+	</style>
+</head>
+
+<body>
+	<p>Um den Effekt zu sehen, sollte man beim Laden der Seite den Cache leeren.</p>
+
+	<p>
+	<img class="lazyLoad" src="starfish.png">
+	<img class="lazyLoad" src="goldengate.jpg">
+	<img class="lazyLoad" data-src="http://pipsum.com/100x100.jpg" src="xx.jpg">
+	</p>
+
+	<script>
+		window.addEventListener('load', lazyLoad, false);
+
+		function lazyLoad() {
+                let images = document.getElementsByClassName("lazyLoad");
+                
+                for (let img of images) {
+                    // get image source from "data-src"
+                    // and load high resolution image
+                    img.setAttribute('src', img.dataset.src);
+
+                    // remove "data-src" attribute AFTER image was loaded
+                    img.addEventListener("load", function() {
+                            this.removeAttribute('data-src');
+                    });
+                }
+                console.log('All resources loaded');
+            }
+
+	</script>
+
+</body></html>
