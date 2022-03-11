@@ -1,0 +1,47 @@
+[
+  {
+    "category": "Hunderassen",
+    "base_url": "https://www.mein-haustier.de/",
+    "images": [
+      "Basenji.jpg",
+      "Basset-Hound.jpg",
+      "Beagle.jpg",
+      "Bernhardiner.jpg",
+      "Boston-Terrier.jpg",
+      "Collie.jpg",
+      "Dalmatiner.jpg",
+      "Deutscher-Boxer.jpg",
+      "Deutsche-Dogge.jpg",
+      "Deutscher-Schaeferhund.jpg",
+      "Golden-Retriever.jpg",
+      "Pudel.jpg"
+    ]
+  }, {
+    "category": "Katzenrassen",
+    "base_url": "https://www.mein-haustier.de/",
+    "images": [
+      "Europaeisch-Kurzhaar.jpg",
+      "Perserkatze.jpg",
+      "Siamkatze.jpg"
+    ]
+  }, {
+    "category": "Vogelrassen",
+    "base_url": "https://www.zooplus.de/magazin/vogel/",
+    "images": [
+      "Nymphensittich.jpg",
+      "Marans.jpg",
+      "Wellensittich.jpg"
+    ]
+  }, {
+    "category": "Pferderassen",
+    "base_url": "https://www.zooplus.de/magazin/pferd/",
+    "images": [
+      "Islandpferd.jpg",
+      "Oldenburger.jpg"
+    ]
+  }, {
+    "category": "Kleintierrassen",
+    "base_url": "https://www.zooplus.de/magazin/kleintiere/",
+    "images": []
+  }
+]

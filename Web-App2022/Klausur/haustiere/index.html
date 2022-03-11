@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        /* TODO 1 */
+        text-align: center;
+        font-size: 40px;
+        border-bottom: 1px solid black;
+      }
+      .box {
+        /* TODO 2 */
+        height: 60px;
+        position: relative;
+        border:3px solid grey;
+        padding: 20px;
+      }
+      a[href="angebote.html"] {
+        /* TODO 3 */
+        text-decoration-line: underline overline;
+        text-decoration-style: wavy;
+      }
+      a[href="angebote.html"]:after {
+        /* TODO 4 */
+        content: "";
+       position: absolute;
+       top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,255,0,0.2);
+      }
+      h2 { padding-top: 1em; }
+    </style>
+  </head>
+  <body>
+    <h1>Willkommen</h1>
+    <div class="box">
+      <div>Hier gibt es alles um 20% billiger (außer Tiernahrung)!</div>
+      <div>Vergleiche unsere <a href="angebote.html">Angebote</a> .</div>
+    </div>
+    <script>
+      'use strict';
+
+      window.onload = function() {
+        let xhr = new XMLHttpRequest();
+        xhr.responseType = "json";
+        xhr.open("GET", "haustiere.json", true);
+        xhr.send();
+        xhr.onload = function () {
+          let obj = this.response;
+          if (obj) {
+            let ret = createIntro();
+            if (ret)
+              addJsonToPage(obj,ret);
+          }
+        };
+      };
+
+        function createIntro() {
+          let eltern = document.getElementsByTagName("div")[0];
+          let titel = document.createElement("h1");
+          titel.innerText="Haustiere";
+
+          eltern.parentNode.insertBefore(titel, eltern.nextElementSibling);
+
+
+          let kasten = document.createElement("div");
+          kasten.innerHTML="<div>Wissenswertes zu unseren Lieblingen:</div>";
+          kasten.setAttribute("class", "box");
+          kasten.setAttribute("style", "padding-bottom: 1300px");
+          eltern.parentNode.insertBefore(kasten, titel.nextElementSibling);
+
+          return kasten;
+        }
+        function addJsonToPage(obj ,kasten){
+          for(let i=0; i<=obj.length;i++){
+            let containerBilder = document.createElement("div");
+            let entry = obj[i]["category"];
+            let categHeader = document.createElement("h2");
+            categHeader.innerHTML=entry;
+            kasten.appendChild(containerBilder);
+            containerBilder.appendChild(categHeader);
+
+            let bilder = obj[i]["images"];
+
+            let anzeigeBilder = document.createElement("img");
+            anzeigeBilder.setAttribute("src",obj[i]["category"]+"/" + bilder[0]);
+            anzeigeBilder.setAttribute("style", "height:200px");
+            containerBilder.appendChild(anzeigeBilder);
+          }
+        }
+    </script>
+    <div><br>
+      <form action="test.php" method="get">
+        Tiername: <input type="text" name="tiername"> <br>
+        Tierart: <input type="text" name="tierart"> <br>
+        <input type="submit" value="Absenden">
+        <input type="reset">
+      </form><br>
+    </div>
+  </body>
+</html>
