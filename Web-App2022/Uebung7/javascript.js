@@ -45,7 +45,5 @@ window.onload=function()
         xhr.onload = function() {
             document.getElementById("bmi").innerHTML = this.responseText;
         };
-
-
     },false);
 };
