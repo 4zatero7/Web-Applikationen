@@ -1,0 +1,25 @@
+[ {
+    "groesse": 1.70,
+    "gewicht": 60,
+    "geschlecht": "female",
+    "vorname": "Regina",
+    "nachname": "Müller",
+    "email": "regina@provider.com",
+    "anmerk": "Bla"
+}, {
+    "groesse": 1.80,
+    "gewicht": 80,
+    "geschlecht": "male",
+    "vorname": "Peter",
+    "nachname": "Meier",
+    "email": "peter@t-online.de",
+    "anmerk": "Blubb"
+}, {
+    "groesse": 1.75,
+    "gewicht": 70,
+    "geschlecht": "male",
+    "vorname": "Torsten",
+    "nachname": "Schmidt",
+    "email": "foobar@gmail.com",
+    "anmerk": "Bla Blubb"
+} ]

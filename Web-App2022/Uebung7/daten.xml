@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bmi>
+  <person>
+    <groesse>1.7</groesse>
+    <gewicht>60</gewicht>
+    <geschlecht>female</geschlecht>
+    <vorname>Regina</vorname>
+    <nachname>Müller</nachname>
+    <email>regina@provider.com</email>
+    <anmerk>Bla</anmerk>
+  </person>
+  <person>
+    <groesse>1.8</groesse>
+    <gewicht>80</gewicht>
+    <geschlecht>male</geschlecht>
+    <vorname>Peter</vorname>
+    <nachname>Meier</nachname>
+    <email>peter@t-online.de</email>
+    <anmerk>Blubb</anmerk>
+  </person>
+  <person>
+    <groesse>1.75</groesse>
+    <gewicht>70</gewicht>
+    <geschlecht>male</geschlecht>
+    <vorname>Torsten</vorname>
+    <nachname>Schmidt</nachname>
+    <email>foobar@gmail.com</email>
+    <anmerk>Bla Blubb</anmerk>
+  </person>
+</bmi>

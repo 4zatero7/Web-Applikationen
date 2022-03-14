@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <title>Title</title>
+</head>
+<body>
+    <header>
+        <h1>Registration</h1>
+    </header>
+    <form action="https://test.php" method="get">
+        <p>
+            Please fill out the form.
+            <img class="bild" id="bildImg" src="img/german.jpg">
+        </p>
+
+        <fieldset>
+        <legend>
+            Login Details
+        </legend>
+        <section>
+            <div>
+                <label for="uname" >User name*</label>
+                <input type="text" id="uname" name="uname" required>
+            </div>
+            <div>
+                <label for="pssw" >Password*</label>
+                <input type="password" id="pssw" name="passw" required>
+            </div>
+            <div>
+                <label for="pssw2" >Retype Password*</label>
+                <input type="password" id="pssw2" name="passw2" required>
+            </div>
+        </section>
+        </fieldset>
+        <fieldset>
+            <legend>User Data</legend>
+            <section>
+                <div>
+                    <label for="fName" >First Name*</label>
+                    <input type="text" id="fName" name="fiName" required>
+                </div>
+                <div>
+                    <label for="mName" >Middle Name</label>
+                    <input type="text" id="mName" name="miName">
+                </div>
+                <div>
+                    <label for="lName" >Last Name*</label>
+                    <input type="text" id="lName" name="laName" required>
+                </div>
+                <div>
+                    <label for="email" >Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </section>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+
+<script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>
