@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="bmi_style.css" rel="stylesheet" type="text/css" media="all">
+    <title>Body Mass Index</title>
+    <h1>BMI-Rechner</h1>
+</head>
+<body>
+<fieldset>
+    <legend>
+        Angaben zur BMI-Berechnung
+    </legend>
+    <form action="http://localhost:8080/" method="get">
+        <section class="eingabe">
+            <div>
+                <label for="gewicht" class="elemLinks">Gewicht</label>
+                <input type = "number" id=gewicht name="gewicht" required>
+            </div>
+            <div class="verschiebenEingabe">
+                <label for="groesse">Größe</label>
+                <input type = "number" id=groesse name="groesse" required>
+            </div>
+        </section>
+        <br>
+        <fieldset class="geschlecht">
+            <legend>
+                Geschlecht
+            </legend>
+            <div class="posGschl">
+            <span class="sp_elem">
+              <input type = "radio" name="geschl" id="gesch_w" value="w">
+              <label for="gesch_w">Weiblich</label>
+            </span>
+                <span class="sp_elem">
+              <input type = "radio" name="geschl" id="gesch_m" value="m">
+              <label for="gesch_m">Männlich</label>
+            </span>
+                <span class="sp_elem">
+              <input type = "radio" name="geschl" id="gesch_s" value="s">
+              <label for="gesch_s">Sonstiges</label>
+            </span>
+            </div>
+        </fieldset>
+        <br>
+        <section class="eingabe">
+            <div>
+                <label for="username"></label>
+                Name
+                <input type = "text" id="username" name ="uname" placeholder="Max Muster" required>
+            </div>
+            <div class="verschiebenEingabe">
+                <label for="email"></label>
+                Email
+                <input type = "email" id="email" placeholder="max.muster@gmail.com" required>
+            </div>
+            <div class="verschiebenEingabe">
+                <label for="anmrk" class="elemLinksAnmerk"></label>
+                Anmerkungen
+                <textarea id="anmrk" name="anmerk"></textarea>
+            </div>
+        </section>
+        <br>
+        <section>
+            <div>
+                <input type = "reset" value="Zurücksetzen" class="datenInput">
+                <input type = "submit" value="Absenden" class="datenInput">
+            </div>
+            <br>
+            <div>
+                <input type = "button" id="btn" value="BMI mit JS berechnen" class="BMI-Button">
+                <input type = "button" id="btnBmiAjax" value="BMI über Ajax holen" class="BMI-Button">
+            </div>
+        </section>
+    </form>
+</fieldset>
+<div class="ausgabe">
+    Ihr Body Mass Index beträgt <span id="bmi"> ____.</span>
+</div>
+<script type="text/javascript" src="bmi_calculator.js"></script>
+</body>
+</html>
