@@ -1,0 +1,23 @@
+{
+    "titel": "Rechnung",
+    "anrede": "Herrn",
+    "vorname": "Erich",
+    "nachname": "Mustermann",
+    "straße": "Musterstrasse 1",
+    "plz": 12345,
+    "ort": "Musterstadt",
+    "liste": [{
+        "menge": 2,
+        "artikelbezeichnung": "GTX1016",
+        "einzelpreis": 250,
+        "gesamt": 500
+    },
+        {
+            "menge": 1,
+            "artikelbezeichnung": "Core i7 6400",
+            "einzelpreis": 300,
+            "gesamt": 300
+        }
+    ],
+    "summe": 800
+}
